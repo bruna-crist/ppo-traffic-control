@@ -1,0 +1,11 @@
+# Bibliotecas nescessarias para rodar o ppo
+# para instalar no vs code rode :
+#  pip install -r requirements.txt aqui no terminal
+
+
+
+stable-baselines3
+gymnasium
+numpy
+matplotlib
+
