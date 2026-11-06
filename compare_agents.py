@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from stable_baselines3 import PPO
 from environment import CustomTrafficEnv
 
-# Carrega o modelo treinado em 2024
 model = PPO.load("ppo_traffic_control.zip")
 
 NUM_EXECUCOES = 30
@@ -53,9 +52,10 @@ for nome, valores in resultados.items():
     print(f"{nome}: média = {np.mean(valores):.2f}")
 
 plt.figure(figsize=(8, 5))
-plt.boxplot(list(resultados.values()),
-            labels=list(resultados.keys()))
-
+plt.boxplot(
+    list(resultados.values()),
+    tick_labels=list(resultados.keys())
+)
 plt.title("Comparação de estratégias de controle")
 plt.ylabel("Recompensa acumulada (100 passos)")
 plt.grid(axis="y", alpha=0.3)

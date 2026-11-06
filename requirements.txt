@@ -4,8 +4,8 @@
 
 
 
-stable-baselines3
-gymnasium
-numpy
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+numpy==1.26.4
 matplotlib
 
